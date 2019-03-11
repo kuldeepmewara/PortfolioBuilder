@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<link href="port.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script>
+	
+
+	  $(function(){
+      $("#myModal").load("add.html"); 
+    });
+/*
+$(function() {
+  var current_progress = 0;
+  var interval = setInterval(function() {
+      current_progress += 10;
+      $("#dynamic")
+      .css("width", current_progress + "%")
+      .attr("aria-valuenow", current_progress)
+      .text(current_progress + "% Complete");
+      if (current_progress >= 100)
+          clearInterval(interval);
+  }, 1000);
+});*/
+
+
+	   
+	   function add()
+	    	{
+
+			  var skname = document.createElement("input");
+			  var att = document.createAttribute("class");       // Create a "class" attribute
+				att.value = "form-control";                           // Set the value of the class 
+				skname.setAttributeNode(att); 
+			  var skvalue = document.createElement("input");
+			  var att = document.createAttribute("class");       // Create a "class" attribute
+				att.value = "form-control";                           // Set the value of the class 
+				skvalue.setAttributeNode(att); 
+
+
+			  document.getElementById("sk").appendChild(btn);
+	    	}
+
+ function set() 
+ {
+ 	// body...
+ 	
+ 	document.getElementById("nm").innerHTML =name ; 
+ 	var elem = document.getElementById("aname");
+ 	document.getElementById("nm").innerHTML=elem.value;
+
+ 	var x = document.getElementById("myFile");
+ 	console.log(x.value);
+ 	document.getElementById("profile").style.backgroundImage="url('"+x.value+"')";
+
+/*
+    document.getElementById("letter").innerHTML=elem.value.charAt(0);
+
+    var email=document.getElementById("aemail");
+    document.getElementById("email").innerHTML="Email :  "+email.value;
+
+    var cno=document.getElementById("anumber");
+    document.getElementById("number").innerHTML="Mobile :  "+cno.value;
+
+    var content=document.getElementById("acontent");
+    document.getElementById("content").innerHTML=content.value;
+
+    var address=document.getElementById("aaddress");
+    document.getElementById("address").innerHTML="Address : "+address.value;
+
+    var git=document.getElementById("agit");
+    if (git==null) {
+    	git="#";
+    }
+    document.getElementById("git").href = git.value;
+
+    var linkedin=document.getElementById("alinkedin");
+    if (linkedin==null) {
+    	linkedin="#";
+    }
+    document.getElementById("linkedin").href=linkedin.value;
+
+    var insta=document.getElementById("ainsta");
+    if (insta==null) {
+    	insta="#";
+    }
+    document.getElementById("insta").href=insta.value;*/
+
+    var clg=document.getElementById("aclg");
+    document.getElementById("clg").innerHTML=clg.value;
+    var d = new Date();
+    var n = d.getFullYear();
+
+    //college
+    var syear=document.getElementById("aclg_syear");
+    var pyear=Number(syear.value.slice(0,4))+4;
+    document.getElementById("clg_year").innerHTML=syear.value.slice(0,4)+"- "+pyear;
+
+    var uni=document.getElementById("aclg_uni");
+    document.getElementById("clg_uni").innerHTML=uni.value;
+
+    var per=document.getElementById("aclg_per");
+    document.getElementById("clg_per").innerHTML=per.value+"%";
+
+
+    //12 school
+    clg=document.getElementById("a12");
+    document.getElementById("12").innerHTML=clg.value;
+
+    syear=document.getElementById("a12_year");
+    document.getElementById("12_year").innerHTML=syear.value.slice(0,4);
+
+    uni=document.getElementById("a12_board");
+    document.getElementById("12_board").innerHTML=uni.value;
+
+    per=document.getElementById("a12_per");
+    document.getElementById("12_per").innerHTML=per.value+"%";
+
+    //10 school
+    clg=document.getElementById("a10");
+    document.getElementById("10").innerHTML=clg.value;
+
+    syear=document.getElementById("a10_year");
+    document.getElementById("10_year").innerHTML=syear.value.slice(0,4);
+
+    uni=document.getElementById("a10_board");
+    document.getElementById("10_board").innerHTML=uni.value;
+
+    per=document.getElementById("a10_per");
+    document.getElementById("10_per").innerHTML=per.value+"%";
+
+    var score=document.getElementById("c");
+    document.getElementById("c").style.width =score+"%" ;
+
+    var slider = document.getElementById("javaRange");
+    document.getElementById("java").style.width=slider.value+"%";
+    var output=document.getElementById("java");
+    output.innerHTML = slider.value+"%"; 
+
+    slider = document.getElementById("pyRange");
+    document.getElementById("python").style.width=slider.value+"%";
+    output=document.getElementById("python");
+    output.innerHTML = slider.value+"%";
+
+    slider = document.getElementById("cppRange");
+    document.getElementById("cpp").style.width=slider.value+"%";
+    output=document.getElementById("cpp");
+    output.innerHTML = slider.value+"%";
+
+    slider = document.getElementById("cRange");
+    document.getElementById("c").style.width=slider.value+"%";
+    output=document.getElementById("c");
+    output.innerHTML = slider.value+"%";// Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+
+}
+
+}
+
+</script>
+
+<head>
+	<title>portfolio</title>
+</head>
+
+<body>
+	
+<!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Modal Header</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" type="text" placeholder="Name" id="aname">
+
+        <input type="file" id="myFile">
+
+        <input class="form-control" type="email" placeholder="Email" id="aemail">
+
+        <input class="form-control" type="number" placeholder="Modile number" id="anumber">
+
+        <textarea class="form-control" placeholder="About you" id="acontent"></textarea>
+
+        <textarea class="form-control" placeholder="Address" id="aaddress"></textarea>
+
+        <input class="form-control" type="link" placeholder="Github link" id="agit" >
+		<input class="form-control" type="link" placeholder="linkedin link" id="alinkedin" >
+		<input class="form-control" type="link" placeholder="Instagram link" id="ainsta" >
+      <legend>College</legend>
+			<input class="form-control" type="text" placeholder="College" id="aclg">
+	        <div class="row">
+				<div class="col-lg-4">starting year</div>
+				<div class="col-lg-8">
+					<input class="form-control" type="month" placeholder="passing year" id="aclg_syear"> 
+				</div>
+			</div>
+		    <input class="form-control" type="text" placeholder="University" id="aclg_uni">
+		    <input class="form-control" type="number" placeholder="Percentage" id="aclg_per">
+        
+		<legend>senior secondary</legend>
+	    <input class="form-control" type="text" placeholder="12th School name" id="a12">
+	    <div class="row">
+			<div class="col-lg-4">passing year</div>
+			<div class="col-lg-8">
+				<input class="form-control" type="month" placeholder="passing year" id="a12_year"> 
+			</div>
+		</div>
+        <input class="form-control" type="text" placeholder="Board" id="a12_board">
+	    <input class="form-control" type="number" placeholder="Percentage" id="a12_per">
+
+	    <legend>secondary</legend>
+	    <input class="form-control" type="text" placeholder="10th School name" id="a10">
+	    <div class="row">
+			<div class="col-lg-4">passing year</div>
+			<div class="col-lg-8">
+				<input class="form-control" type="month" placeholder="passing year" id="a10_year"> 
+			</div>
+		</div>
+        <input class="form-control" type="text" placeholder="Board" id="a10_board">
+	    <input class="form-control" type="number" placeholder="Percentage" id="a10_per">
+
+		
+		
+		
+		c<div class="slidecontainer">
+  		<input type="range" min="1" max="100" value="50" class="slider" id="cRange">
+		</div>
+	    cpp<div class="slidecontainer">
+  		<input type="range" min="1" max="100" value="50" class="slider" id="cppRange">
+		</div>
+		java<div class="slidecontainer">
+  		<input type="range" min="1" max="100" value="50" class="slider" id="javaRange">
+  		<p>Value: <span id="demo"></span></p>
+  	    </div>
+		python<div class="slidecontainer">
+			
+  		<input type="range" min="1" max="100" value="50" class="slider" id="pyRange">
+		</div>
+
+		
+	    
+	     <!--<BUTTON id="add_btn" class="btn btn-primary" onclick="add()">Add</BUTTON>-->
+	  
+
+	    
+      </div>
+
+    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="set()">close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+	<div class="home" id="home">
+		<div class="header">
+			<a href="#contact">Contact</a>
+			<a href="#projects">Projects</a>
+			<a href="#skills">Skills</a>
+			<a href="#education">Education</a>
+			<a href="#about">About me</a>
+			<a href="#home">Home</a>
+			
+			
+			<button type="button" class="icon btn-round" data-toggle="modal" data-target="#myModal" id="letter">KM</button>
+			            
+        </div>
+
+             <div class="centered">
+
+                <div class="home_image" id="profile" style="background-image: url('images/in_goggle.jpg')";></div>
+                   <div class="text" id="nm">Kuldeep Mewara</div>
+             </div>
+           
+    </div>
+
+
+
+
+
+ <section class="main" id="about">
+      <div class="container">
+        <h2 class="name"><i class="fa fa-user"></i> About me</h2><hr>
+        
+        <div class="row">
+          <div class="col-lg-7 ">
+          	<br>
+          	<br>
+            <p class="text-white text-muted card-text card-text" id="content"> I am a student, belong to Jodhpur. currently, I am studying in 3 year (6 semester) pursuing  Computer science & Engineering at jodhpur institute of Engineering and technology. i want to  expand on my current skill set while also learning, growing and contributing to a great organization that aligns with my values.""<br>
+
+            I’m very proud of my strengths in learning new concepts and
+			tools quickly / focusing on goals and
+			outcomes and even though these are strengths I’m always trying to build on them</p>
+			</div>
+			
+            <div class="col-lg-5 ">
+            	 <br>
+          	<br>
+            <p class="lead" id="email"><spam class="orange">Email : </spam>kuldeepmewara17@gmail.com</p>
+            
+            <p class="lead" id="number"><spam class="orange">Mobile : </spam> +91 8619237447</p>
+            <p class="lead" id="address"><spam class="orange">Address : </spam> In Side Sojati Gate Near Jhulelal Temple (342001), Jodhpur, Rajasthan</p>
+            <div class="center-div">
+	            <div class="row">
+	            	<div class="col-lg-4"><a  id ="git"href="#"><i class="fa fa-github"></i></a>
+	            	</div>
+	            	<div class="col-lg-4"><a  id ="linkedin" href="#"><i class="fa fa-linkedin"></i>
+	            	</div><div class="col-lg-4"><a  id ="insta" href="#"><i class="fa fa-instagram"></i>
+	            	
+	            	</div>
+	            </div>
+        	</div>
+          </div>
+
+        </div>
+       
+      </div>
+    </section>
+
+	
+
+   
+
+    <section class="main" id="education">
+		<div class="container">
+    	<h2 class="name"> <i class="fa fa-graduation-cap"></i> Education</h2>
+    	<hr/>
+
+    	<div class="row">
+    		<div class="col-lg-4 maincontainer">
+    			<div class="card text-center thecard" style="width: 18rem;">
+					  <div class="card-body front">
+					    <h5 class="card-title"><i class="fa fa-graduation-cap"></i><br>Bachelor of Technology</h5>
+					    <h6 class="card-subtitle mb-2" id="clg">Jodhpur Institute of Engineering & Technology,Jodhpur</h6>
+					    <p class="card-text" id="clg_year">2016- current</p>
+			
+  					  </div>
+
+  					  <div class="card-body back">
+					    <h5 class="card-title"> <i class="fa fa-graduation-cap"></i><br>University</h5>
+					    <h6 class="card-subtitle mb-2 text-muted" id="clg_uni">Rajasthan Technical University, Kota</h6>
+					    <p class="card-text"><h2 id="clg_per">80 agg.</h2></p>
+			
+  					  </div>
+                </div>
+    		</div>
+
+			<div class="col-lg-4 maincontainer">
+    			<div class="card text-center thecard" style="width: 18rem;">
+					  <div class="card-body front">
+					    <h5 class="card-title"><i class="fa fa-graduation-cap"></i><br> Senior Secondary</h5>
+					    <h6 class="card-subtitle mb-2 text-muted" id="12">Shri Maheshwari Sr. Sec.School, Jodhpur</h6>
+					    <p class="card-text" id="12_year">2016</p>
+			
+  					  </div>
+
+  					  <div class="card-body back">
+					    <h5 class="card-title"> <i class="fa fa-graduation-cap"></i><br> Board</h5>
+					    <h6 class="card-subtitle mb-2 text-muted" id="12_board">Rajasthan Board of Secondary Education</h6>
+					    <p class="card-text" ><h2 id="12_per">83%</h2></p>
+			
+  					  </div>
+                </div>
+    		</div>
+
+    		
+
+    		<div class="col-lg-4 maincontainer">
+    			<div class="card text-center thecard" style="width: 18rem;">
+					  <div class="card-body front">
+					    <h5 class="card-title"> <i class="fa fa-graduation-cap"></i><br>Secondary</h5>
+					    <h6 class="card-subtitle mb-2 text-muted" id="10">Oxford Public Sr. Sec.School, Jodhpur</h6>
+					    <p class="card-text" id="10_year">2014</p>
+			
+  					  </div>
+
+  					  <div class="card-body back">
+					    <h5 class="card-title"> <i class="fa fa-graduation-cap"></i><br>Board</h5>
+					    <h6 class="card-subtitle mb-2 text-muted" id="10_board">Rajasthan Board of Secondary Education</h6>
+					    <p class="card-text"><h2 id="10_per">77%</h2></p>
+  					  </div>
+                </div>
+    		</div>
+    	</div>
+    </div>
+    </section>
+
+
+
+
+    <div class="main" id="skills">
+
+<div class="container">
+    	<h2 class="name"> <i class="fa fa-laptop"></i> Skills</h2>
+    	<hr>
+
+    	<div class="center-div">Java
+    		<div class="progress">
+    			
+				  <div class="progress-bar progress-bar-striped" role="progressbar" id="java" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+			</div>
+			  
+			
+			Python
+			<div class="progress">
+			  <div class="progress-bar progress-bar-striped" role="progressbar"  id="python" style= "width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">50%</div>
+			</div>
+			C
+			<div class="progress">
+			  <div class="progress-bar progress-bar-striped" role="progressbar"  id ="c" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">75%</div>
+			</div>
+			C++
+			<div class="progress">
+			  <div class="progress-bar progress-bar-striped" role="progressbar" id="cpp" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">75%</div>
+			</div>
+    	</div>
+    </div>
+</div>
+
+
+   
+<div class="main"  id="projects">
+        <div class="container">
+         
+          <h3 class="name"><i class="fa fa-laptop"></i>Projects</h3> 
+          <hr>
+        <br>
+        <br>
+	 <div class="row">
+				<div class="col-lg-4">
+    			<div class="card text-center" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title">Online shopping</h5>
+					    <h6 class="card-subtitle mb-2 text-muted">Application is to allow the customer to shop virtually using the Internet and allow customers to
+						buy the items and articles of their desire from the store. The information pertaining to the products are
+						stores on an RDBMS at the server side (store).
+						</h6><a href ="https://github.com/kuldeepmewara/online_shopping.git" class="btn btn-primary">code</a>
+  					  </div>
+                </div>
+                </div>
+
+               
+
+                <div class="col-lg-4">
+    			<div class="card text-center" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title">Tour Vision</h5>
+					    <h6 class="card-subtitle mb-2 text-muted">Developed a tour assistant app, which helps the tourist schedule and manage his tours. The
+						app recommends optimized decisions to save time, money and maximize tour experience.</h6><a href="#" class="btn btn-primary disable">code</a>
+  					  </div>
+                </div>
+                </div>
+ 				
+ 				<div class="col-lg-4">
+    			<div class="card text-center" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title">Trio</h5>
+					    <h6 class="card-subtitle mb-2 text-muted">A python application work for student teachers and admin of the college, the functioning
+							include ADMIN: admission, news twittering. TEACHERS: records student’s attendance their marks, and
+							analysis or result. STUDENT: have a complete look onto marks obtained, news by the teachers and
+							assignment status as well</h6><a href="https://github.com/kuldeepmewara/Trio.git" class="btn btn-primary">code</a>
+  					  </div>
+                </div>
+                </div>
+
+        </div>
+  
+
+        <div class="row">
+                <div class="col-lg-4">
+    			<div class="card text-center" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title">Jotter Pad</h5>
+					    <h6 class="card-subtitle mb-2 text-muted">Text editor engineered for Creative writing. It is perfect for writing novel, lyrics, poems, essay,
+						draft and screenplay. The clean typing interface allows you to focus on writing, shaping your thoughts into
+						text. Go about your creative writing without distractions and write to your hearts content.
+						</h6>
+						<a href="https://github.com/kuldeepmewara/Jotterpad.git" class="btn btn-primary">code</a>
+  					  </div>
+
+                </div>
+                </div>
+
+		 </div>
+
+		  </div>
+
+		</div>
+
+
+
+
+
+ 	
+
+
+  
+</div>
+
+<div class="main" id="contact">
+
+ 
+      <div class="container">
+        <h2 class="name"><i class="fa fa-phone"></i> Contact Me</h2><hr>
+       
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+           
+
+            <form action="mailto:kuldeepmewara17@gmail.com" method="post" enctype="text/plain">
+				Name:<br>
+				<input class="form-control"  type="text" name="name"  placeholder="Full name"required="required"><br>
+				E-mail:<br>
+				<input  class="form-control"  type="text" name="mail"  placeholder="Email"required="required"><br>
+				Phone No.<br>
+				<input  class="form-control"  type="Contact" name="phone" placeholder="Contact no" required="required"><br>
+
+				Message:<br>
+				<textarea  class="form-control"  name="comment" size="50" placeholder="Message" required="required"></textarea><br><br>
+				<input type="submit" class="btn btn-primary" value="Send">
+				<input type="reset" class="btn btn-primary "value="Reset">
+				</form>
+          </div>
+        </div>
+      </div>
+   
+
+
+</div>
+
+
+
+</body>
+</html>

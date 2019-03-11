@@ -1,0 +1,267 @@
+/* The navigation bar */
+:root{
+   --about-color:nul;
+};
+html{
+	    font-family: Lato,Arial;
+	    scroll-behavior: smooth;
+}
+body{
+	height: 2000px;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  height:70px;
+  z-index: 4;
+}
+
+.header a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo:hover {
+  font-size: 25px;
+  font-weight: bold;
+   background-color:none;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+
+.header a:active {
+  background-color: blue;
+  color: white;
+
+}
+
+.icon{
+	border-radius: 50%;
+	padding: 6px;
+	text-align: center;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: lightblue;
+	float: left;
+  border: none;
+}
+
+.home{
+
+	background-image: url(images/sl3.jpg);
+	background-size: cover;
+	height: 700px;
+	margin-top:60px;
+	
+}
+
+img{
+	
+    position: fixed; 
+    width:100%;
+    height:100%;
+    object-fit: contain;/* or absolute */
+
+	
+}
+
+.centered{
+    top: 40%;
+    left: 48%;
+    margin-top: -50px;
+    margin-left: -100px;
+    position: absolute;
+   
+
+}
+.home_image{
+	
+	width: 250px;
+	height: 250px;
+	border-radius:50%;
+  background-size: cover;
+  background-color: red;
+  
+
+  
+
+}
+
+
+.text{
+	text-align: center;
+	font-size: 40px;
+	color: white;
+  margin-top: 20px;
+
+	
+}
+.title{
+  
+ 
+  text-align: center;
+  padding-top: 80px;
+
+}
+
+.maincontainer{
+  position: relative;
+  width: 200px;
+  height: 220px;
+  margin-top: 100px;
+ 
+ 
+}
+.thecard{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  
+}
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffc728;
+  color: #333;
+}
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: lightgreen;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+.center-div
+{
+  margin: 0 auto;
+  max-width: 700px;
+  border-radius: 3px;
+}
+
+.orange{
+color: orange;
+font-weight: bold;
+font-family: sans-serif ;
+}
+
+#about{
+  background-color: lightgreen;
+  
+  height: 700px;
+  
+}
+#education
+{
+  background-color:pink;
+  height: 650px;
+  
+}
+#skills{
+height: 700px;
+background-color:orange;
+}
+#projects{
+  height:1000px; 
+
+}
+
+
+a i{
+  color: black;
+}
+h6{
+  font-size: 10px;
+}
+
+.mains {
+  margin-top: 0px; /* Add a top margin to avoid content overlay */
+  background-color: #20c997;
+  height: 600px;
+}
+
+.main {
+  padding: 16px;
+  padding-top: 80px;
+   
+  background-color: #20c997;/* Used in this example to enable scrolling */
+}
+
+
+.name{
+	    text-align: center;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+#contact{
+  background-color: orange;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+.thumbnails{
+	overflow: hidden;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;   
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
